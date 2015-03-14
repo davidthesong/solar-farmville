@@ -1,0 +1,85 @@
+.game-container {
+	position: relative;
+	max-width: 1200px;
+	height: 900px;
+	border: 2px solid #ddd;
+}
+
+.grid {
+	margin-top: 40%;
+	width: 45%;
+	margin: 0 auto;
+}
+
+.block {
+	height: 100px;
+	border: 2px solid #ddd;
+	background-image: url(http://previewcf.turbosquid.com/Preview/2014/08/01__17_56_46/grass_tex.jpgb91b8892-a3aa-4b03-bde2-0be3478eae61Larger.jpg);
+}
+
+.block:hover {
+	cursor: pointer;
+}
+
+.status {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30%;
+	border: 2px solid #000;
+}
+
+.progress {
+	margin-bottom: 10px;
+}
+
+.money-amount {
+	margin-bottom: 10px;
+}
+
+.popup {
+	display: none;
+	position: absolute;
+	width: 50%;
+	top: 20%;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 20px;
+	z-index: 5;
+	background: #fff;
+	border: 2px solid #ddd;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.popup .escape-container {
+	float: left;
+	cursor: pointer;
+}
+
+.btn-buy {
+	display: block;
+	margin: 0 auto;
+}
+
+.img-block-type {
+
+}
+
+.energy-img {
+	height: 100%;
+}
+
+.btn-nextMonth {
+	display:block;
+	margin: 0 auto;
+}
+
+.logo {
+	margin-top:2%;
+	margin-left:5%;
+	max-height: 20%;
+	max-width: 20%;
+	margin-bottom: 10%;
+}

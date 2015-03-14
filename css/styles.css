@@ -1,0 +1,131 @@
+body{
+	background-image: url('../img/background.png');
+	font-family: 'Roboto', sans-serif;
+}
+.game-container {
+	position: relative;
+	max-width: 1200px;
+	max-height: 900px;
+}
+
+.grid {
+	margin-top: 40%;
+	width: 45%;
+	margin: 0 auto;
+	transition: webkit-transform .5s, transform .5s;
+	/*-webkit-transform: matrix3d(0.981576352, 0.0274439393, 0.1890891206, 0, -0.1703885647, 0.5735455435, 0.8012572908, 0, -0.0864615659, -0.8187138325, 0.5676548759, 0, 0, 0, 0, 1);
+    -webkit-transform-style: preserve-3d;*/
+}
+
+.block {
+	height: 160px;
+	border: 2px solid #ddd;
+	background-image: url(http://previewcf.turbosquid.com/Preview/2014/08/01__17_56_46/grass_tex.jpgb91b8892-a3aa-4b03-bde2-0be3478eae61Larger.jpg);
+}
+
+.block:hover {
+	cursor: pointer;
+}
+
+.status {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30%;
+	border: 2px solid #000;
+	background-color:rgba(33,33,33,0.3);
+}
+
+.progress {
+	margin-bottom: 10px;
+}
+
+.waste-bar {
+	text-align: center;
+	color: #000;
+}
+
+.money-amount {
+	margin-bottom: 10px;
+}
+
+.popup {
+	display: none;
+	position: absolute;
+	width: 50%;
+	top: 20%;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 20px;
+	z-index: 5;
+	background: #fff;
+	border: 2px solid #ddd;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+
+}
+
+.popup .escape-container {
+	float: left;
+	cursor: pointer;
+}
+
+.btn-buy {
+	display: block;
+	margin: 0 auto;
+}
+
+.img-block-type {
+
+}
+
+.energy-img {
+	max-height: 100%;
+}
+
+.btn-next-year {
+	display:block;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.logo {
+	margin-top:2%;
+	margin-left:5%;
+	max-height: 20%;
+	max-width: 20%;
+	margin-bottom: 10%;
+}
+/*.top{
+	background-color:rgba(33,33,33,0.7);
+}*/
+.money-title, .green{
+	color:#1AED3A;
+}
+.waste-title, .red{
+	color:#ED1A4B;
+}
+.orange{
+	color:#E78624;
+}
+.blue{
+	color:#3BBDEE;
+}
+.year-title,.year-number{
+	color:#38BFEF;
+}
+.titlescreen .col-centered {
+	float: none;
+	text-align: center;
+	margin: 0 auto;
+}
+.btn-start {
+	margin-top: 20px;
+}
+.version-text {
+	display: none;
+	position: absolute;
+	font-weight: bold;
+	font-size: 1.2em;
+}

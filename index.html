@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        Solar Farmville
+        </title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    
+    <body>
+        <div class="game-container container-fluid">
+            <div class="top container">
+                <div class="logo-container">
+                    <img class="logo" src="img/logo.png" alt="">
+                </div>
+                <div class="status container">
+                    <div class="money-container">
+                        <p class="money-title">Money</p>
+                            <div class="progress">
+                                <div class="money-bar progress-bar progress-bar-success progress-bar-striped active money-amount" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                                    $1000
+                                </div>
+                            </div>
+                    </div>
+                    <div class="waste-container">
+                        <p class="waste-title">Waste</p>
+                        <div class="progress">
+                            <div class="waste-bar progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                0%
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="year-title">
+                        Year
+                        </p>
+                        <div class="year-number">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of .top.container -->
+            <div class="titlescreen popup">
+                <div class="row">
+                    <div class="col-sm-6 col-centered">
+                        <img class="titleLogo img-responsive" src="img/logo.png">
+                        <button class="btn btn-primary btn-start text-center" type="button">Start</button>
+                        <h3>Instructions</h3>
+                        <p><span><h4 class="red">Goal:</h4></span> Get as much money as possible without polluting the planet.</p>
+                        <p><span><h4 class="orange">How to get money?</h4></span>Build and upgrade buildings.</p>
+                        <p><span><h4 class="blue">How to get rid of waste?</h4></span> Spend money to remove waste at the end of each year.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="grid">
+                <div class="row">
+                    <div class="block col-sm-4 block-1" data-block="0">
+                        <div class="version-text" data-version="1"> Version 1</div>
+                        <img class="energy-img">
+                    </div>
+                    <div class="block col-sm-4 block-2" data-block="1">
+                        <div class="version-text" data-version="1"> Version 1</div>
+                        <img class="energy-img">
+                    </div>
+                    <div class="block col-sm-4 block-3" data-block="2">
+                        <div class="version-text" data-version="1"> Version 1</div>
+                        <img class="energy-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="block col-sm-4 block-4" data-block="3">
+                        <div class="version-text" data-version="1"> Version 1</div>
+                        <img class="energy-img">
+                    </div>
+                    <div class="block col-sm-4 block-5" data-block="4">
+                        <div class="version-text" data-version="1"> Version 1</div>
+                        <img class="energy-img">
+                    </div>
+                    <div class="block col-sm-4 block-6" data-block="5">
+                        <div class="version-text" data-version="1"> Version 1</div>
+                        <img class="energy-img">
+                    </div>
+                </div>
+            </div><!-- end of .grid -->
+            <button type="button" class="btn btn-primary btn-next-year">Next Year</button>
+            <div class="popup buy-menu">
+                <div class="escape-container">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </div>
+                <h2 class="blue">Choose energy source to build:</h2>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2>Oil</h2>
+                        <img class="img-responsive img-block-type"src="img/oil.png" alt="">
+                        <div class="text-center">
+                            <p class="green">+$100/Year</p>
+                            <p class="red">+15% Waste/Year</p>
+                        </div>
+                        
+                        <button type="button" class="btn btn-primary oil btn-buy" data-buy="oil">
+                        <span class="glyphicon glyphicon-usd"></span>
+                        100
+                        </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2>Solar</h2>
+                        <img class="img-responsive img-block-type"src="img/solar.png" alt="">
+                        <div class="text-center">
+                            <p class="green">+$250/Year</p>
+                            <p class="red">+5% Waste/Year</p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-buy" data-buy="solar">
+                        <span class="glyphicon glyphicon-usd"></span>500
+                        </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2>Wind</h2>
+                        <img class="img-responsive img-block-type" src="img/wind.png" alt="">
+                        <div class="text-center">
+                            <p class="green">+$500/Year</p>
+                            <p class="red">+5% Waste/Year</p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-buy" data-buy="wind">
+                        <span class="glyphicon glyphicon-usd"></span>1500
+                        </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2>Nuclear</h2>
+                        <img class="img-responsive img-block-type" src="img/nuclear.png" alt="">
+                        <div class="text-center">
+                            <p class="green">+$1500/Year</p>
+                            <p class="red">+15%/Year</p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-buy" data-buy="nuclear">
+                        <span class="glyphicon glyphicon-usd"></span>2500
+                        </button>
+                    </div>
+                </div>
+            </div><!-- end of .buy-menu -->
+            <div class="popup upgrade-menu">
+                <div class="escape-container">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </div>
+                <h2 class="text-center">Upgrades</h2>
+                <div class="row">
+                    <div class="col-sm-3 version" data-version="1">
+                        <h3>Version 1</h1>
+                        <img class="img-responsive img-block-type"src="img/oil.png" alt="">
+                        <div class="text-center">
+                            <p class="green">+Current Price/Year</p>
+                            <p class="red">+Current Price/Year</p>
+                        </div>
+                        <button type="button" class="btn btn-primary oil btn-upgrade" data-upgrade="1">
+                        <span class="glyphicon glyphicon-usd"></span>
+                        Buy
+                        </button>
+                    </div>
+                    <div class="col-sm-3 version" data-version="2">
+                        <h3>Version 2</h1>
+                        <img class="img-responsive img-block-type"src="img/solar.png" alt="">
+                        <div class="text-center">
+                            <p class="green">+$150/Year</p>
+                            <p class="red">+0%/Year</p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-upgrade" data-upgrade="2">
+                        <span class="glyphicon glyphicon-usd">1000</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-3 version" data-version="3">
+                        <h3>Version 3</h1>
+                        <img class="img-responsive img-block-type" src="img/wind.png" alt="">
+                        <div class="text-center">
+                            <p class="green">+$200/Year</p>
+                            <p class="red">+0%/Year</p>
+                            <p class="price"></p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-upgrade" data-upgrade="3">
+                        <span class="glyphicon glyphicon-usd">3000</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-3 remove">
+                        <h3>Remove Building</h3>
+                        <button class="btn btn-warning btn-remove">Remove</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="popup gameover">
+                <h2 class="text-center">Game Over</h2>
+                <p class="gameover-score">Your score is: <p>
+                    <div class="progress">
+                        <div class="money-amount money-bar progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                            $250
+                        </div>
+                 </div>
+                    <p class="year-title">
+                        You survived for <span class="yearnum"></span> years from 2014 - <span class="year-number"></span>
+                    </p>
+                        
+                <div class="row gameover-btns">
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-primary btn-again">Play Again?</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-primary btn-menu">Back to Menu</button>
+                    </div>
+                </div>
+            </div><!-- end of .gameover -->
+            <div class="popup year-report">
+                <div class="escape-container">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </div>
+                <div class="fact">
+                    <h2 class="fact-title">SMUD Fact of the Year</h2>
+                    <p class="fact-text"></p>
+                </div>
+                <h3 class="green">Money Gained $<span class="year-gain"></span></h3>
+                <h3 class="red">Waste Gained <span class="year-waste"></span></h3>
+                
+                <button class="btn btn-danger remove-waste-25-btn" data-waste="25">Remove 25% Waste for <span class="remove-waste-25"></span> </button>
+                <button class="btn btn-danger remove-waste-50-btn" data-waste="50">Remove 50% Waste for <span class="remove-waste-50"></span></button>
+                <button class="btn btn-primary btn-next">Continue</button>
+            </div>
+        </div><!-- end of .game-container -->
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
