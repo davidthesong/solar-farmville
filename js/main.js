@@ -229,7 +229,7 @@ function upgradeImgRefresh() {
 			imgUrl = "img/wind.png";
 			break;
 		case '':
-			imgUrl = "";
+			imgUrl = null;
 			break;
 		default:
 			imgUrl = null;
@@ -256,7 +256,7 @@ function refresh (blockId){
 			imgUrl = "img/wind.png";
 			break;
 		case '':
-			imgUrl = "";
+			imgUrl = null;
 			break;
 		default:
 			imgUrl = null;
